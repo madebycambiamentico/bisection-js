@@ -6,6 +6,7 @@ call to *getRootOf()* return *NaN* if no point founded, or root value otherwise.
 number|NaN getRootOf(
 	function f[,
 	number guessPoint[,
+	number increment[,
 	number tollerance[,
 	<other function f parameters...>]]]
 	)
