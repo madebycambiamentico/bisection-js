@@ -13,7 +13,7 @@ number|NaN getRootOf(
 ```
 
 Example: find root of *5 a - 3 b = -c*, where *b = 3* and *c = 2.5*. *getRootOf* should return value of *a*.
-```
+```javascript
 function anyFunction(a,b,c){
   return 5*a-3*b+c
 }
