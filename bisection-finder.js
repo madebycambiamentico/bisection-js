@@ -28,7 +28,7 @@ function tryToFindIntervalForBisection(func,x0,dx){
 	
 	if (x0 === undefined) x0 = 0.1;
 	if (dx === undefined) dx = 0.05;
-	console.log(arguments)
+	//console.log(arguments)
 	
 	var args1 = [x0],
 		args2 = [x0];
@@ -36,6 +36,7 @@ function tryToFindIntervalForBisection(func,x0,dx){
 		args1 = args1.concat( Array.prototype.slice.call(arguments, 3) );
 		args2 = args2.concat( Array.prototype.slice.call(arguments, 3) );
 	}
+	//console.log(args1)
 	
 	var a,b,
 		fa,fb,
@@ -52,6 +53,7 @@ function tryToFindIntervalForBisection(func,x0,dx){
 		args2[0] = x0 + iter*dx;
 		fa = func.apply(null,args1);
 		fb = func.apply(null,args2);
+		//console.log('fa = '+fa+' fb = '+fb)
 	}
 	
 	if (fa!==0 && fb/fa > 0) return false;
@@ -76,7 +78,7 @@ function getRootOf(f, x0, dx, tol){
 	);
 	if (interval === false){
 		console.warn("Couldn't find valid interval for bisection function.");
-		return false;
+		return NaN;
 	}
 	console.log("interval: "+interval[0]+', '+interval[1]);
 	
